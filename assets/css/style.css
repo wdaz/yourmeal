@@ -1,0 +1,47 @@
+@import './variable.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fs);
+    font-family: "Nunito", serif;
+}
+
+header {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 24px 10px 36px 10px;
+    clip-path: ellipse(110% 100% at top);
+}
+
+.welcome__text h1 {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    padding: 24px 15px 16px 15px;
+}
+
+.welcome__text h1 span {
+    color: var(--secondary);
+}
+
+.welcome__text p {
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    padding-top: 16px;
+}
+
+.welcome__text p span {
+    font-weight: 600;
+}
+
+.welcome__image {
+    padding-top: 24px;
+}
