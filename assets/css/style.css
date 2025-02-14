@@ -51,7 +51,7 @@ main {
     padding: 30px 10px;
 }
 
-main nav ul {
+.nav-menu {
     list-style: none;
     overflow-x: auto;
     -ms-overflow-style: none;
@@ -62,11 +62,11 @@ main nav ul {
     gap: 8px;
 }
 
-main nav ul:-webkit-scrollbar {
+.nav-menu:-webkit-scrollbar {
     display: none;
 }
 
-main nav ul li a {
+.nav-menu__link {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -77,10 +77,10 @@ main nav ul li a {
     color: var(--black);
 }
 
-main nav ul li a.active {
+.nav-menu__link.active {
     background-color: var(--primary);
 }
 
-main nav ul li a span {
+.nav-menu__link span {
     text-wrap: nowrap;
 }
