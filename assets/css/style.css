@@ -11,8 +11,9 @@ body {
     font-family: "Nunito", serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 16px;
     background-color: var(--ghost-white);
+    color: var(--black);
 }
 
 header {
@@ -83,4 +84,30 @@ main {
 
 .nav-menu__link span {
     text-wrap: nowrap;
+}
+
+aside {
+    padding: 30px 0; 
+}
+
+.basket {
+    background-color: var(--white);
+    padding: 16px 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basket__text {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.basket__quantity {
+    font-size: 10px;
+    line-height: 13px;
+    padding: 3px 13px;
+    border-radius: 6px;
+    background-color: var(--flash-white);
 }
