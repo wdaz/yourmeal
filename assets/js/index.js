@@ -45,14 +45,6 @@ const menus = [
 const navMenu = document.querySelector('.nav-menu');
 init();
 
-function addEventToLink(index) {
-    const navMenuLink = document.querySelectorAll('.nav-menu__link');
-    navMenuLink.forEach((l, i) => {
-        i !== index ? l.classList.remove('active') : (l.classList.add('active'), l.scrollIntoView());
-    });
-
-}
-
 function init() {
     let menuItem = '';
     menus.forEach((menu, index) => {
@@ -66,4 +58,12 @@ function init() {
         `
     });
     navMenu.innerHTML = menuItem;
+}
+
+function addEventToLink(index) {
+    const navMenuLink = document.querySelectorAll('.nav-menu__link');
+    navMenuLink.forEach((l, i) => {
+        i !== index ? l.classList.remove('active') : (l.classList.add('active'), l.scrollIntoView());
+    });
+
 }
