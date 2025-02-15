@@ -1,88 +1,3 @@
-const menus = [
-    {
-        id: 'burger',
-        name: 'Бургеры',
-        path: '/',
-        imgSrc: 'assets/images/menu/burger.png',
-    },
-    {
-        id: 'snack',
-        name: 'Закуски',
-        path: '/snack',
-        imgSrc: 'assets/images/menu/snack.png',
-    },
-    {
-        id: 'hotdog',
-        name: 'Хот-доги',
-        path: 'hotdog',
-        imgSrc: 'assets/images/menu/hot-dog.png',
-    },
-    {
-        id: 'combo',
-        name: 'Комбо',
-        path: 'combo',
-        imgSrc: 'assets/images/menu/combo.png',
-    },
-    {
-        id: 'shaurma',
-        name: 'Шаурма',
-        path: 'shaurma',
-        imgSrc: 'assets/images/menu/shaurma.png',
-    },
-    {
-        id: 'pizza',
-        name: 'Пицца',
-        path: 'pizza',
-        imgSrc: 'assets/images/menu/pizza.png',
-    },
-    {
-        id: 'wok',
-        name: 'Вок',
-        path: 'wok',
-        imgSrc: 'assets/images/menu/wok.png',
-    },
-]
-
-const items = {
-    burger: [
-        {
-            imgSrc: 'assets/images/food/burgers/burger.png',
-            name: 'Мясная бомба',
-            price: 689,
-            currency: '₽',
-            weight: 520,
-            uom: 'г',
-            quantity: 10,
-        },
-        {
-            imgSrc: 'assets/images/food/burgers/burger.png',
-            name: 'Мясная бомба',
-            price: 700,
-            currency: '₽',
-            weight: 520,
-            uom: 'г',
-            quantity: 10,
-        },
-        {
-            imgSrc: 'assets/images/food/burgers/burger.png',
-            name: 'Мясная бомба',
-            price: 689,
-            currency: '₽',
-            weight: 520,
-            uom: 'г',
-            quantity: 10,
-        },
-        {
-            imgSrc: 'assets/images/food/burgers/burger.png',
-            name: 'Мясная бомба',
-            price: 689,
-            currency: '₽',
-            weight: 520,
-            uom: 'г',
-            quantity: 10,
-        },
-    ]
-}
 const navMenu = document.querySelector('.nav-menu');
 const section = document.querySelector('section');
 init();
@@ -121,7 +36,7 @@ function addItem(itemId, name) {
     section.innerHTML = `
           <h2>${name}</h2>
             <div class="box">
-            ${selectedItems?selectedItems.reduce((updated, latest) =>
+            ${selectedItems ? selectedItems.reduce((updated, latest) =>
         updated.concat(`
                     <article class="item">
                         <img src="${latest.imgSrc}" alt="${latest.name}" class="item__img">
@@ -131,7 +46,7 @@ function addItem(itemId, name) {
                         <button type="button" class="item__add">Добавить</button>
                     </article>
                 `
-        ), ''): 'Ничего не найдено'}
+        ), '') : 'Ничего не найдено'}
             </div>
             `
 }

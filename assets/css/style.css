@@ -131,11 +131,11 @@ section .item {
     background-color: var(--white);
     padding: 4px;
     border-radius: 12px;
-    flex-grow: 1;
+    flex: 0 0 calc(50% - 10px);
 }
 
 section .item__img {
-    width: 100%;
+    width: 164px;
     object-fit: cover;
 }
 
