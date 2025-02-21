@@ -1,22 +1,13 @@
 @import './variable.css';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: var(--black);
-}
+@import './reset.css';
+@import './component.css';
+@import './components/index.css';
 
 body {
-    font-size: var(--fs);
     font-family: "Nunito", serif;
-    font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+    font-size: var(--fs);
     background-color: var(--ghost-white);
     color: var(--black);
     display: flex;
@@ -41,206 +32,13 @@ header {
     background-color: var(--primary);
     text-align: center;
     padding: 24px 10px 36px 10px;
-    clip-path: ellipse(110% 100% at top);
-}
-
-.welcome__text h1 {
-    color: var(--white);
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 36px;
-    padding: 24px 15px 16px 15px;
-}
-
-.welcome__text h1 span {
-    color: var(--secondary);
-}
-
-.welcome__text p {
-    color: var(--white);
-    padding-top: 16px;
-}
-
-.welcome__text p span {
-    font-weight: 600;
-}
-
-.welcome__image {
-    padding-top: 24px;
+    clip-path: ellipse(120% 100% at top);
 }
 
 main {
-    padding: 30px 10px;
-    flex: 1;
-}
-
-.nav-menu {
-    list-style: none;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.nav-menu:-webkit-scrollbar {
-    display: none;
-}
-
-.nav-menu__link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 3px 8px;
-    border-radius: 50px;
-    text-decoration: none;
-    background-color: var(--white);
-    border: 1px solid var(--white)
-}
-
-.nav-menu__link:hover:not(.active) {
-    border-color: var(--orange-giants);
-}
-
-.nav-menu__link.active {
-    background-color: var(--primary);
-}
-
-.nav-menu__link span {
-    text-wrap: nowrap;
-}
-
-aside {
-    padding: 30px 0;
-}
-
-.basket {
-    background-color: var(--white);
-    padding: 16px 10px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.basket__text {
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.basket__quantity {
-    font-size: 10px;
-    line-height: 13px;
-    padding: 3px 13px;
-    border-radius: 6px;
-    background-color: var(--flash-white);
-}
-
-section h2 {
-    padding-bottom: 16px;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 34px;
-}
-
-section .box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    gap: 10px;
-}
-
-section .item {
-    background-color: var(--white);
-    padding: 4px;
-    border-radius: 12px;
-    flex: 0 0 calc(50% - 10px);
-}
-
-section .item__img {
-    width: 100%;
-    object-fit: cover;
-}
-
-
-section .item__price {
-    font-weight: 600;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 4px;
-}
-
-section .item__name {
-    font-size: 12px;
-    padding-bottom: 16px;
-}
-
-section .item__weight {
-    font-weight: 600;
-    font-size: 12px;
-    padding-bottom: 7px;
-    color: var(--silver);
-}
-
-
-section .item__add {
-    background-color: var(--flash-white);
-    width: 100%;
-    border-radius: 8px;
-    padding: 10px;
-    border: 0;
-    line-height: 12px;
-}
-
-section .item__add:hover {
-    background-color: var(--primary);
-    color: var(--white);
-}
-
-section .item__add:focus {
-    background-color: var(--orange-giants);
-    color: var(--white);
-}
-
-section .item__add:disabled {
-    background-color: var(--flash-white);
-    color: var(--silver-chalice);
-}
-
-.info {
-    background-color: var(--white);
-    padding: 24px 10px;
-}
-
-.info__box {
-    padding-bottom: 34px;
+    padding: 30px 10px 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.info__box h3 {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    padding-bottom: 8px;
-}
-
-.info__box a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.info__box a:hover {
-    color: var(--silver);
-}
-
-.info__box .social-logo {
-    display: flex;
-    gap: 20px;
+    gap: 30px;
+    flex: 1;
 }

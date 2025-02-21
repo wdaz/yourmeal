@@ -1,0 +1,45 @@
+section h2 {
+    padding-bottom: 16px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+section .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+section .item {
+    background-color: var(--white);
+    padding: 4px;
+    border-radius: 12px;
+    flex: 0 0 calc(50% - 10px);
+}
+
+section .item__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+section .item__price {
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+section .item__name {
+    font-size: 12px;
+    padding-bottom: 16px;
+}
+
+section .item__weight {
+    font-weight: 600;
+    font-size: 12px;
+    padding-bottom: 7px;
+    color: var(--silver);
+}

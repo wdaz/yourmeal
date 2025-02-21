@@ -1,0 +1,37 @@
+.nav-menu {
+    list-style: none;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.nav-menu:-webkit-scrollbar {
+    display: none;
+}
+
+.nav-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 8px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: var(--white);
+    border: 1px solid var(--white)
+}
+
+.nav-menu__link:hover:not(.active) {
+    border-color: var(--orange-giants);
+}
+
+.nav-menu__link.active {
+    background-color: var(--primary);
+}
+
+.nav-menu__link span {
+    text-wrap: nowrap;
+}

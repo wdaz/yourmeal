@@ -1,0 +1,32 @@
+.button {
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px 0;
+    line-height: 12px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.button:focus {
+    background-color: var(--orange-giants);
+    color: var(--white);
+}
+
+.button:disabled {
+    color: var(--silver-chalice);
+    background-color: var(--white);
+}
+
+.button__order {
+    background-color: var(--orange-red);
+    color: var(--white);
+}
+
+.button__add {
+    background-color: var(--flash-white);
+    color: var(--black);
+}

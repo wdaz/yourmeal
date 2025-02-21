@@ -1,5 +1,8 @@
 const navMenu = document.querySelector('.nav-menu');
 const section = document.querySelector('section');
+const basketMini = document.querySelector('.basket-mini');
+const basketFull = document.querySelector('.basket-full');
+
 init();
 
 function init() {
@@ -43,10 +46,20 @@ function addItem(itemId, name) {
                         <p class="item__price">${latest.price}${latest.currency}</p>
                         <p class="item__name">${latest.name}</p>
                         <p class="item__weight">${latest.weight}${latest.uom}</p>
-                        <button type="button" class="item__add">Добавить</button>
+                        <button type="button" class="button__add button">Добавить</button>
                     </article>
                 `
         ), '') : 'Ничего не найдено'}
             </div>
             `
+}
+
+function showBasketItems() {
+    basketMini.style.display = 'none';
+    basketFull.style.display = 'flex';
+}
+
+function closeBasket() {
+    basketFull.removeAttribute('style');
+    basketMini.removeAttribute('style');
 }
