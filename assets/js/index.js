@@ -112,15 +112,29 @@ function showItemsInBasket() {
         `);
     const totalPrice = basketItems?.reduce((a, b) => a + b.price * b.quantity, 0);
     basketTotalPrice.innerHTML = totalPrice + basketItems[0].currency;
+    refreshDeliveryNotice(totalPrice);
+}
+function refreshDeliveryNotice(totalPrice) {
     const basketFooter = document.querySelector('.basket__footer');
-    if (totalPrice >= 599 && !basketFooter.querySelector('p')) {
-        document.querySelector('.basket__footer').insertAdjacentHTML('afterbegin', `
-            <p>
-                <img src="assets/images/icons/icon-delivery.png" alt="Бесплатная доставка">
-                    <span>Бесплатная доставка</span>
-            </p>`);
+    if (!basketFooter) return;
+
+    const freeDeliveryHTML = `
+      <p>
+        <img src="assets/images/icons/icon-delivery.png" alt="Бесплатная доставка">
+        <span>Бесплатная доставка</span>
+      </p>
+    `;
+    const freeDeliveryMsg = basketFooter.querySelector('p');
+
+    if (totalPrice >= 599) {
+        if (!freeDeliveryMsg) {
+            basketFooter.insertAdjacentHTML('afterbegin', freeDeliveryHTML);
+        }
+        basketFooter.style.justifyContent = 'space-between';
     } else {
-        basketFooter.querySelector('p')?.remove();
+        if (freeDeliveryMsg) {
+            freeDeliveryMsg.remove();
+        }
         basketFooter.style.justifyContent = 'flex-end';
     }
 }
