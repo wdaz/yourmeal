@@ -37,7 +37,7 @@
             </ul>
         </nav>
         <aside class="basket">
-            <button class="basket-mini" onclick="showBasketItems()">
+            <button class="basket-mini" onclick="showFullBasket()">
                 <div class="basket__info">
                     <div class="basket__info--box">
                         <p class="basket--text">Корзина</p>
@@ -51,52 +51,18 @@
                         <p class="basket--text">Корзина</p>
                         <p class="basket--quantity">0</p>
                     </div>
-                    <!-- <p class="basket--empty">Тут пока пусто :(</p> -->
                 </div>
                 <div class="basket__content">
-                    <ul>
-                        <li>
-                            <div class="basket__item">
-                                <img src="assets/images/food/burgers/burger2.png" alt="">
-                                <div>
-                                    <p>Супер сырный</p>
-                                    <p>512г</p>
-                                    <p>550₽</p>
-                                </div>
-                            </div>
-                            <div class="basket__item--quantity">
-                                <button>-</button>
-                                <p> 1 </p>
-                                <button>+</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="basket__item">
-                                <img src="assets/images/food/burgers/burger2.png" alt="">
-                                <div>
-                                    <p>Супер сырный</p>
-                                    <p>512г</p>
-                                    <p>550₽</p>
-                                </div>
-                            </div>
-                            <div class="basket__item--quantity">
-                                <button>-</button>
-                                <p> 1 </p>
-                                <button>+</button>
-                            </div>
-                        </li>
+                    <ul class="basket__items-container">
+                      
                     </ul>
                     <div>
                         <div class="basket__total">
                             <p>Итого</p>
-                            <p>1279₽</p>
+                            <p class="basket__total--price"></p>
                         </div>
                         <button class="button button__order">Оформить заказ</button>
                         <div class="basket__footer">
-                            <p>
-                                <img src="assets/images/icons/icon-delivery.png" alt="Бесплатная доставка">
-                                <span>Бесплатная доставка</span>
-                            </p>
                             <button onclick="closeBasket()">Свернуть</button>
                         </div>
                     </div>

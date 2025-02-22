@@ -125,4 +125,22 @@ let basketItems = [
         uom: 'г',
         quantity: 3,
     },
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 689,
+        currency: '₽',
+        weight: 520,
+        uom: 'г',
+        quantity: 5,
+    },
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 700,
+        currency: '₽',
+        weight: 550,
+        uom: 'г',
+        quantity: 3,
+    }
 ];

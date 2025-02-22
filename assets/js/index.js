@@ -3,6 +3,7 @@ const section = document.querySelector('section');
 const basketMini = document.querySelector('.basket-mini');
 const basketFull = document.querySelector('.basket-full');
 const basketQuantity = document.querySelectorAll('.basket--quantity');
+const basketInfo = document.querySelectorAll('.basket__info');
 
 start();
 
@@ -63,9 +64,11 @@ function addItem(itemId, name) {
             `
 }
 
-function showBasketItems() {
+function showFullBasket() {
+    if (basketItems.length === 0) return;
     basketMini.style.display = 'none';
     basketFull.style.display = 'flex';
+    showItemsInBasket();
 }
 
 function closeBasket() {
@@ -77,7 +80,47 @@ function writeBasketItemsCount() {
     const items = getLocalStorage('basketItems')
     items ? basketItems = items : basketItems = [];
     let basketItemsCount = basketItems.length > 0 ?
-        basketItems.reduce((a, b) => a.quantity + b.quantity) :
+        basketItems?.reduce((a, b) => a + b.quantity, 0) :
         0;
     basketQuantity.forEach(q => q.innerHTML = basketItemsCount);
+    if (!basketItems?.length) {
+        basketInfo.forEach(i => i.insertAdjacentHTML('beforeend', '<p class="basket--empty">Тут пока пусто :(</p>'));
+    }
+}
+
+function showItemsInBasket() {
+    const basketItemsContainer = document.querySelector('.basket__items-container');
+    const basketTotalPrice = document.querySelector('.basket__total--price');
+    basketItemsContainer.innerHTML = '';
+    basketItems?.forEach(item =>
+        basketItemsContainer.innerHTML += `
+                <li>
+                    <div class="basket__item">
+                        <img src="${item.imgSrc}" alt="${item.name}">
+                        <div>
+                            <p>${item.name}</p>
+                            <p class="basket__item--weight">${item.weight}${item.uom}</p>
+                            <p>${item.price}${item.currency}</p>
+                        </div>
+                    </div>
+                    <div class="basket__item--quantity">
+                        <button>-</button>
+                        <p> ${item.quantity} </p>
+                        <button>+</button>
+                    </div>
+                </li>  
+        `);
+    const totalPrice = basketItems?.reduce((a, b) => a + b.price * b.quantity, 0);
+    basketTotalPrice.innerHTML = totalPrice + basketItems[0].currency;
+    const basketFooter = document.querySelector('.basket__footer');
+    if (totalPrice >= 599 && !basketFooter.querySelector('p')) {
+        document.querySelector('.basket__footer').insertAdjacentHTML('afterbegin', `
+            <p>
+                <img src="assets/images/icons/icon-delivery.png" alt="Бесплатная доставка">
+                    <span>Бесплатная доставка</span>
+            </p>`);
+    } else {
+        basketFooter.querySelector('p')?.remove();
+        basketFooter.style.justifyContent = 'flex-end';
+    }
 }
