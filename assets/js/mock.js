@@ -114,7 +114,7 @@ let basketItems = [
         currency: '₽',
         weight: 520,
         uom: 'г',
-        quantity: 10,
+        quantity: 2,
     },
     {
         imgSrc: 'assets/images/food/burgers/burger.png',
@@ -123,6 +123,6 @@ let basketItems = [
         currency: '₽',
         weight: 550,
         uom: 'г',
-        quantity: 10,
+        quantity: 3,
     },
 ];

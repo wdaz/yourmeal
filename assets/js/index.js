@@ -76,5 +76,8 @@ function closeBasket() {
 function writeBasketItemsCount() {
     const items = getLocalStorage('basketItems')
     items ? basketItems = items : basketItems = [];
-    basketQuantity.forEach(q => q.innerHTML = basketItems.length);
+    let basketItemsCount = basketItems.length > 0 ?
+        basketItems.reduce((a, b) => a.quantity + b.quantity) :
+        0;
+    basketQuantity.forEach(q => q.innerHTML = basketItemsCount);
 }
