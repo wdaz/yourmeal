@@ -4,9 +4,17 @@ const basketMini = document.querySelector('.basket-mini');
 const basketFull = document.querySelector('.basket-full');
 const basketQuantity = document.querySelectorAll('.basket--quantity');
 
-init();
+start();
 
-function init() {
+function start() {
+    initMenu();
+    // TODO: Remove this line when add basket functionality is implemented
+    setLocalStorage('basketItems', basketItems);
+    writeBasketItemsCount();
+}
+
+
+function initMenu() {
     let menuItem = '';
     menus.forEach((menu, index) => {
         if (index === 0) {
@@ -20,12 +28,9 @@ function init() {
                     <span>${menu.name}</span>
                 </a>
             </li>
-        `
+        `;
     });
     navMenu.innerHTML = menuItem;
-    // TODO: Remove this line when add basket functionality is implemented
-    setLocalStorage('basketItems', basketItems);
-    writeBasketItemsCount();
 }
 
 function addEventToLink(menuId, name, index) {
