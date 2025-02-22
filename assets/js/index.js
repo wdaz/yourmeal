@@ -3,7 +3,26 @@ const section = document.querySelector('section');
 const basketMini = document.querySelector('.basket-mini');
 const basketFull = document.querySelector('.basket-full');
 const basketQuantity = document.querySelectorAll('.basket--quantity');
-let basketItems = [1,2];
+let basketItems = [
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 689,
+        currency: '₽',
+        weight: 520,
+        uom: 'г',
+        quantity: 10,
+    },
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 700,
+        currency: '₽',
+        weight: 520,
+        uom: 'г',
+        quantity: 10,
+    },
+];
 init();
 
 function init() {
