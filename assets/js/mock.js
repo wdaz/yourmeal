@@ -52,16 +52,14 @@ const items = {
             currency: '₽',
             weight: 520,
             uom: 'г',
-            quantity: 10,
         },
         {
             imgSrc: 'assets/images/food/burgers/burger.png',
             name: 'Мясная бомба',
             price: 700,
             currency: '₽',
-            weight: 520,
+            weight: 550,
             uom: 'г',
-            quantity: 10,
         },
         {
             imgSrc: 'assets/images/food/burgers/burger.png',
@@ -70,7 +68,6 @@ const items = {
             currency: '₽',
             weight: 520,
             uom: 'г',
-            quantity: 10,
         },
         {
             imgSrc: 'assets/images/food/burgers/burger.png',
@@ -79,7 +76,6 @@ const items = {
             currency: '₽',
             weight: 520,
             uom: 'г',
-            quantity: 10,
         },
     ],
     snack: [
@@ -90,7 +86,6 @@ const items = {
             currency: '₽',
             weight: 220,
             uom: 'г',
-            quantity: 10,
         },
         {
             imgSrc: 'assets/images/food/snacks/snack2.png',
@@ -99,7 +94,6 @@ const items = {
             currency: '₽',
             weight: 180,
             uom: 'г',
-            quantity: 10,
         },
         {
             imgSrc: 'assets/images/food/snacks/snack3.png',
@@ -108,8 +102,27 @@ const items = {
             currency: '₽',
             weight: 160,
             uom: 'г',
-            quantity: 10,
         },
     ]
 }
 
+let basketItems = [
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 689,
+        currency: '₽',
+        weight: 520,
+        uom: 'г',
+        quantity: 10,
+    },
+    {
+        imgSrc: 'assets/images/food/burgers/burger.png',
+        name: 'Мясная бомба',
+        price: 700,
+        currency: '₽',
+        weight: 550,
+        uom: 'г',
+        quantity: 10,
+    },
+];
