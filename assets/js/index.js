@@ -2,7 +2,8 @@ const navMenu = document.querySelector('.nav-menu');
 const section = document.querySelector('section');
 const basketMini = document.querySelector('.basket-mini');
 const basketFull = document.querySelector('.basket-full');
-
+const basketQuantity = document.querySelectorAll('.basket--quantity');
+let basketItems = [1,2];
 init();
 
 function init() {
@@ -22,6 +23,8 @@ function init() {
         `
     });
     navMenu.innerHTML = menuItem;
+    setLocalStorage('basketItems', basketItems);
+    writeBasketItemsCount();
 }
 
 function addEventToLink(menuId, name, index) {
@@ -62,4 +65,10 @@ function showBasketItems() {
 function closeBasket() {
     basketFull.removeAttribute('style');
     basketMini.removeAttribute('style');
+}
+
+function writeBasketItemsCount() {
+    const items = getLocalStorage('basketItems')
+    items ? basketItems = items : basketItems = [];
+    basketQuantity.forEach(q => q.innerHTML = basketItems.length);
 }
